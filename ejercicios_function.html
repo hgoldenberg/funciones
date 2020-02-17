@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ejercicios_funtion</title>
+  </head>
+  <body>
+    <script src="ejercicios_function.js">
+
+    //Ejercicio crearFrase
+    /* En el tag script de un HTML, definí una nueva función llamada crearFrase.
+    crearFrase debería seleccionar aleatoriamente entre dos o más opciones de frases pre-establecidas y devolverla (return).
+    Una buena forma es crear un número aleatorio usando Math.randon() y evaluar: si ese número es mayor que cierto valor,
+    la frase es… Si es menor que cierto valor, entonces la frase seria… usando un if.
+    Invocar crearFrase y guardar el valor retornado en una variable que se llame nuevaFrase
+    Usa alert para mostrar la frase en pantalla.
+    Refactoreá tu código para que no necesite la variable nuevaFrase
+    Usá un while loop para correr crearFrase diez veces seguidas para ver si realmente la selección de oraciones es aleatorio.*/
+
+
+// código sin refactorear
+      /* var frase_1="Siempre que llovio paró"
+      var frase_2="Lo que mata es la humedad"
+
+      var crearFrase = function (){
+        var a= Math.random()
+        console.log(a)
+        if (a<0.5) {
+          return (frase_1)
+        } else {
+          return (frase_2)
+        }
+      }
+
+      var nuevaFrase = crearFrase ()
+      alert (nuevaFrase)
+
+      cantidad=0
+      while (cantidad<=10) {
+        console.log(crearFrase())
+        cantidad++
+      }*/
+
+// código refactoreado
+
+        var frase_1="Siempre que llovio paró"
+        var frase_2="Lo que mata es la humedad"
+
+        var crearFrase = function (){
+          var a= Math.random()
+          console.log(a)
+          if (a<0.5) {
+            return (frase_1)
+          } else {
+            return (frase_2)
+          }
+        }
+
+
+        alert (crearFrase())
+
+        cantidad=0
+        while (cantidad<=10) {
+          console.log(crearFrase())
+          cantidad++
+        }
+
+    </script>
+
+  </body>
+</html>
